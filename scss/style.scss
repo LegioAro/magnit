@@ -1,0 +1,132 @@
+html,
+body,
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    background: linear-gradient(88.76deg, #eeb15c 0%, #f4dd8e 91.51%);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    padding: 32px 0;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #0a0e13;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        
+        span{
+            transform: translateX(10px);
+        }
+    }
+    span {
+        font-size: 45px;
+        line-height: 20px;
+        margin-left: 15px;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 420px) {
+    .btn {
+        font-size: 14px;
+        span {
+            font-size: 35px;
+        }
+    }
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.eot?4li40x");
+    src: url("../fonts/icomoon.eot?4li40x#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?4li40x") format("truetype"), url("../fonts/icomoon.woff?4li40x") format("woff"),
+        url("../fonts/icomoon.svg?4li40x#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-analiz:before {
+    content: "\e901";
+    color: #fff;
+}
+.icon-detail:before {
+    content: "\e902";
+    color: #fff;
+}
+.icon-dialog:before {
+    content: "\e903";
+    color: #fff;
+}
+.icon-head:before {
+    content: "\e905";
+    color: #fff;
+}
+.icon-light:before {
+    content: "\e906";
+    color: #fff;
+}
+.icon-people:before {
+    content: "\e907";
+    color: #fff;
+}
+.icon-arrow:before {
+    content: "\e900";
+}
+.icon-calendar:before {
+    content: "\e904";
+    color: #fff;
+}
+
+@import "cover";
+@import "secret";
+@import "benefits";
+@import "about";
+@import "present";
+@import "footer";
+@import "form";

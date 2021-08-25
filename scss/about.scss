@@ -1,0 +1,121 @@
+.about {
+    background-image: url(../img/about__bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    overflow: hidden;
+    &__wrapper {
+        max-width: 1370px;
+        width: 100%;
+        padding: 120px 10px 0;
+        margin: 0 auto;
+        display: flex;
+        grid-gap: 40px;
+    }
+
+    &__img {
+        max-width: 535px;
+        width: 100%;
+    }
+
+    &__info {
+    }
+
+    &__info-title {
+        font-weight: 800;
+        font-size: 54.8537px;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 50px;
+        position: relative;
+        span {
+            display: inline-flex;
+            background: linear-gradient(88.76deg, #eeb15c 0%, #f4dd8e 91.51%), #c4c4c4;
+            padding: 0 10px;
+        }
+        &::before {
+            position: absolute;
+            content: "АРТЕМ НЕСТЕРЕНКО";
+            font-weight: 800;
+            font-size: 145.185px;
+            font-size: calc(20px + (145 - 20) * ((100vw - 320px) / (1920 - 320)));
+            line-height: 100%;
+            text-transform: uppercase;
+            color: #000000;
+            opacity: 0.03;
+            top: -80px;
+            top: calc(20px + (-80 - 20) * ((100vw - 320px) / (1920 - 320)));
+            left: -10px;
+            pointer-events: none;
+        }
+    }
+
+    &__info-text {
+        p,
+        span {
+            margin-bottom: 15px;
+        }
+        span {
+            font-weight: 700;
+            display: inline-flex;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .about {
+        &__info-title {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .about {
+        &__img {
+            img {
+                object-fit: contain;
+                object-position: bottom;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .about {
+        &__info-title {
+            font-size: 35px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        &__wrapper {
+            padding: 80px 10px 0;
+        }
+        &__img {
+            display: none;
+        }
+        &__info-title {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .about {
+        &__info-title {
+            font-size: 28px;
+        }
+    }
+}
+@media (max-width: 370px) {
+    .about {
+        &__info-title {
+            font-size: 24px;
+        }
+    }
+}
