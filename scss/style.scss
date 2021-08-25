@@ -36,9 +36,8 @@ img {
     color: #0a0e13;
     cursor: pointer;
     transition: 0.3s;
-    &:hover{
-        
-        span{
+    &:hover {
+        span {
             transform: translateX(10px);
         }
     }

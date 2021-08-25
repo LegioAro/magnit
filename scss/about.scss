@@ -1,7 +1,7 @@
 .about {
     background-image: url(../img/about__bg.jpg);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left bottom;
     background-size: contain;
     overflow: hidden;
     &__wrapper {
@@ -50,6 +50,21 @@
         }
     }
 
+    &__info-title-img {
+        max-width: 150px;
+        height: 150px;
+        width: 100%;
+        object-position: top;
+        object-fit: contain;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #eeb15c;
+        display: none;
+        img {
+            transform: translateY(0%) translateX(4%);
+        }
+    }
+
     &__info-text {
         p,
         span {
@@ -72,6 +87,9 @@
 
 @media (max-width: 1050px) {
     .about {
+        &__info {
+            padding-bottom: 80px;
+        }
         &__img {
             img {
                 object-fit: contain;
@@ -98,9 +116,28 @@
             display: none;
         }
         &__info-title {
+            display: flex;
+            align-items: center;
             &::before {
                 display: none;
             }
+        }
+        &__info-title-img {
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        &__info-title {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__info-title-img {
+            margin: 30px 0 0;
         }
     }
 }
